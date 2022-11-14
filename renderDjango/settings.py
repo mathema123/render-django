@@ -24,9 +24,24 @@ SECRET_KEY = 'django-insecure-o&q5_0bo&-9d#@s)hs&$$i#e^w$#3td#^i^kx3x!69d*n!uf)2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://render-django-vzf1.onrender.com']
+ALLOWED_HOSTS = ['render-django-vzf1.onrender.com', '127.0.0.1']
 
 # Application definition
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'root': {
+        'level': 'INFO',
+        'handlers': ['console']
+    },
+}
 
 INSTALLED_APPS = [
     'django.contrib.admin',

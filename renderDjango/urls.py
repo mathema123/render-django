@@ -18,6 +18,6 @@ from django.http import HttpResponse
 from django.urls import path
 
 urlpatterns = [
-    path('/', lambda: HttpResponse('hello waffle!')),
+    path('', lambda request: HttpResponse('hello waffle!')),
     path('admin/', admin.site.urls),
 ]
